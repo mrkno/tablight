@@ -1,17 +1,15 @@
 {
-    "name": "__MSG_appName__",
-    "version": "0.0.7",
+    "name": "Tablight",
+    "version": "1.0.0",
     "manifest_version": 2,
-    "description": "__MSG_appDescription__",
+    "description": "Hot key (Cmd/Ctrl + O) that pulls up spotlight-like interface for open tabs.",
     "icons": {
-        "16": "images/icon-16.png",
-        "48": "images/icon-48.png",
-        "128": "images/icon-128.png"
+        "16": "img/icon/icon16.png",
+        "48": "img/icon/icon48.png",
+        "128": "img/icon/icon128.png"
     },
-    "default_locale": "en",
     "background": {
         "scripts": [
-            "scripts/chromereload.js",
             "scripts/background.js"
         ]
     },
@@ -29,5 +27,11 @@
     "permissions": [
         "tabs",
         "activeTab"
-    ]
+    ],
+	"applications": {
+		"gecko": {
+			"id": "tablight@makereti.co.nz",
+			"strict_min_version": "42.0"
+		}
+    }
 }
